@@ -3,16 +3,19 @@
 
 int main(int argc, char *argv[])
 {
-   int num;
+   char c;
+   int num = 0;
 
-   printf("input a integer :");
-   scanf("%d", &num);
+   printf("input a string :"); //do not need scanf
 
-   if (num < 0)
-      num = -num; 
-
-   printf("The absolute value is %i.\n", num);
-
+   while ( (c = getchar()) != '\n') 
+   {
+         if (c >= '0' && c <= '9')
+            num = num + 1; //num++
+   }
+		
+   printf("The number of digits is %d.\n", num);
+   
    system("PAUSE");	
    return 0;
 }
