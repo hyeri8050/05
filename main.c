@@ -3,20 +3,16 @@
 
 int main(int argc, char *argv[])
 {
-  int num;
-  
-  printf("input an integer :");
-  scanf("%d", &num);
-  
-  if (num > 0)
-     printf("It is a positive integer./n");
-  
-  else if (num < 0)
-     printf("It is a negative integer.\n");
+   int num;
 
-  else
-     printf("It is zero!\n");
-   
-  system("PAUSE");	
-  return 0;
+   printf("input a integer :");
+   scanf("%d", &num);
+
+   if (num < 0)
+      num = -num; 
+
+   printf("The absolute value is %i.\n", num);
+
+   system("PAUSE");	
+   return 0;
 }
